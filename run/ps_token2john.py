@@ -9,12 +9,12 @@ import sys
 # Use "generate.py from https://erpscan.com/wp-content/uploads/tools/ERPScan-tockenchpoken.zip
 # to generate sample PS_TOKEN cookies.
 
-print "Based on tokenchpoken v0.5 beta's parse.py file"
-print 'Oracle PS_TOKEN cracker. Token parser'
-print
-print 'Alexey Tyurin - a.tyurin at erpscan.com'
-print 'ERPScan Research Group - http://www.erpscan.com'
-print
+print("Based on tokenchpoken v0.5 beta's parse.py file")
+print('Oracle PS_TOKEN cracker. Token parser')
+print()
+print('Alexey Tyurin - a.tyurin at erpscan.com')
+print('ERPScan Research Group - http://www.erpscan.com')
+print()
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', action='store', dest='cookie', required=True,
                     help='Set a victim\'s PS_TOKEN cookie for parsing')
@@ -37,7 +37,7 @@ user = data[loc:loc + int(user_length.encode('hex'), 16)].replace("\x00", "")
 
 # python generate.py -e 0 -u PS -l ENG -p "" -n PSFT_HR -d 2015-07-01-08.06.46
 if data_hash == sha_mac:
-    print "%s: there is no password for the attacking node!" % user
+    print("%s: there is no password for the attacking node!" % user)
 else:
     # print hash
     sys.stdout.write("%s:$dynamic_1600$%s$HEX$%s\n" % (user, sha_mac,
