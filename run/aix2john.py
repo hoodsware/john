@@ -73,6 +73,6 @@ if __name__ == "__main__":
     if args.filename:
         process_file(args.filename, args.is_standard)
     else:   
-        print "Please specify a filename (-f)"
+        print("Please specify a filename (-f)")
         sys.exit(-1)
 
