@@ -20,7 +20,7 @@ def process_file(filename):
             try:
                 data = line.split(':')
                 out = data[0] + ":$as400ssha1$" + data[1] + "$" + data[0]
-                print out.encode('utf-8')
+                print(out.encode('utf-8'))
             except:
                 sys.stderr.write("Error: parsing of line '%s' failed - skipping\n" % line)
                 pass
