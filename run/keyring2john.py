@@ -74,5 +74,5 @@ if __name__ == "__main__":
     parser.add_argument('KEYRING_FILE', help='Input Gnome Keyring file')
     args=parser.parse_args()
     Parser = GnomeKeyring_Parser(args.KEYRING_FILE)
-    print Parser.parse_keyring()
+    print(Parser.parse_keyring())
 
